@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #f6d365 0%, #f3c222 70%, #fda085 100%);
+  color: rgb(58, 48, 35);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header, form {
+  background-color: #0da085;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-size: 1.5rem;
+  color: rgb(250, 253, 253);
+}
+
+form {
+  border-radius: 0 0 50px 0;
+}
+
+form input, form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: #ffefeb;
+}
+
+form button {
+  color: #ff6f47;
+  background: #2fa99a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #ff6f47;
+  color: white;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 5vh 10vw;
+  background: #ffefeb;
+  font-size: 1.3rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;/*allows items to remian original size n not be stretched */
+  transition: all 0.5s ease;
+}
+
+.todo li{
+  flex: 1;/*pushes all buttons to the right end*/
+}
+
+.trash-btn, .complete-btn{
+  background: #ff6f47;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: rgb(76, 143, 10);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.btn-trash, .btn-check{
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #2fa99a;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translatey(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+/*
+* Making it responsive
+*/
+@media screen and (max-width: 600px){
+  form input, form button {
+    padding: 0.2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px){
+  form input {
+    width: 70vw;
+  }
+}
