@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do List</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
     <header>
@@ -20,20 +20,19 @@
           </svg>
         </i>
       </button>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      </div>
     </form>
     <div class="todo-container">
-      <ul class="todo-list">
-        <!--To be injected by the JS
-        <div class="todo">
-          <li></li>
-          <button>Delete</button>
-          <button>Checked</button>
-        </div>
-        -->
-        
+      <ul class="todo-list">        
       </ul>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="./assets/app.js"></script>
   </body>
 </html>
